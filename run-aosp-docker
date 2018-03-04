@@ -5,9 +5,9 @@ ccache=${2:-~/.ccache}
 
 if [ ! -d ${ccache} ]; then
 	echo "WARN: running aosp-builder without ccache"
-	docker run -it --mount type=bind,source="${aosp}",target=/aosp aosp-builder
+	docker run --rm -it --mount type=bind,source="${aosp}",target=/aosp aosp-builder
 else
-	docker run -it --mount type=bind,source="${aosp}",target=/aosp \
+	docker run --rm -it --mount type=bind,source="${aosp}",target=/aosp \
 		--mount type=bind,source="${ccache}",target=/ccache \
 		aosp-builder
 fi
