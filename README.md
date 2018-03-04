@@ -17,3 +17,5 @@ This docker just executes a bash from which you can build Android in a regular w
 You can also give argument to define aosp dir (first arg) and an optional ccache dir (second arg)
 
     $ sudo ./run-aosp-docker /home/workspace/aosp /home/workspace/myccachedir
+
+You can exit container by exiting the shell ($ exit or CTRL+D)
